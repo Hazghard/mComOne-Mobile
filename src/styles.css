@@ -39,13 +39,7 @@
     border: 1px solid white;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > nav
-    > div.navbar-nav.navbar-right.ml-auto.w-25.justify-content-end {
+  body > app-root > div > app-layout > div > nav > div.navbar-nav.navbar-right.ml-auto.w-25.justify-content-end {
     width: auto !important;
   }
 
@@ -71,177 +65,65 @@
   }
 
   /* Content dashboard */
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-dashboard
-    > div
-    > div
-    > div {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-dashboard > div > div > div {
     flex-direction: column !important;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     margin: 0;
   }
-  /*Dashboard item */
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-dashboard
-    > div
-    > div
-    > div
-    > div:nth-child(n) {
+
+  /* Dashboard item */
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-dashboard > div > div > div > div:nth-child(n) {
     max-width: unset !important;
     padding-bottom: 20px;
   }
-  /*Card*/
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-dashboard
-    > div
-    > div
-    > div
-    > div:nth-child(n)
-    > div
-    > div.card-body {
+
+  /* Card */
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-dashboard > div > div > div > div:nth-child(n) > div > div.card-body {
     padding: 1.5rem !important;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-overview
-    > div
-    > div
-    > div {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-overview > div > div > div {
     flex-direction: column !important;
     gap: 10px;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-overview
-    > div
-    > div
-    > div
-    > div:nth-child(n) {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-overview > div > div > div > div:nth-child(n) {
     width: 100% !important;
     max-width: unset !important;
   }
 
-  /*Machine Assessment List*/
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-menu
-    > div
-    > div.machine-content
-    > app-list
-    > div.list {
+  /* Machine Assessment List */
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list {
     position: unset;
     width: unset;
     padding: 0;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-menu
-    > div
-    > div.machine-content
-    > app-list
-    > div.list-content {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content {
     position: unset;
     width: unset;
     padding: 0;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-menu
-    > div
-    > div.machine-content
-    > app-list
-    > div.list-content
-    > app-section
-    > div.table-content
-    > table {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.table-content > table {
     table-layout: unset !important;
   }
 
-  body
-    > app-root
-    > div
-    > app-layout
-    > div
-    > div
-    > app-breadcrumbs
-    > div.project-content
-    > app-menu
-    > div
-    > div.machine-content
-    > app-list
-    > div.list-content
-    > app-section
-    > div.table-content
-    > table
-    > tbody
-    > tr:nth-child(1)
-    > td.id.text-truncate {
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.table-content > table > tbody > tr:nth-child(1) > td.id.text-truncate {
     width: 40px !important;
     max-width: 6.5rem !important;
   }
+
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-header > breadcrumbs > ol > li:nth-child(1) > a {
-    color:green !important;
+    color: green !important;
   }
-  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine.ng-star-inserted > div{
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine.ng-star-inserted > div {
     flex-wrap: nowrap;
   }
+
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine.ng-star-inserted > div > div.col > nav {
     display: flex;
     flex-wrap: nowrap;
@@ -252,30 +134,35 @@
     white-space: nowrap;
     scroll-behavior: auto;
   }
+
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header {
     margin-right: 0;
     margin-left: 0;
     justify-content: center;
   }
+
   .text-truncate {
     white-space: wrap;
   }
 
   /* Selection search state */
-  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div{
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div {
     display: flex;
   }
+
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div > div:nth-child(1) > form > div {
     flex-wrap: nowrap;
   }
 
-  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div > div:nth-child(1){
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div > div:nth-child(1) {
     margin-right: 0;
   }
+
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col > div > div:nth-child(1) > form > div > ng-select {
     max-width: 100%;
   }
-  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col{
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col {
     padding: 0 0 10px 0;
   }
 }
