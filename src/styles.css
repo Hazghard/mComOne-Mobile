@@ -165,4 +165,8 @@
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-list > div.list-content > app-section > div.row.align-items-center.table-header > div.col {
     padding: 0 0 10px 0;
   }
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine.ng-star-inserted > div > div.col {
+    padding-right: 80px;
+  }
 }
