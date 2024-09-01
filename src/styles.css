@@ -169,4 +169,8 @@
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine.ng-star-inserted > div > div.col {
     padding-right: 80px;
   }
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > app-menu-edit > edit-modal > div.edit-modal {
+    width: 80vw;
+  }
 }
