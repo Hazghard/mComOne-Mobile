@@ -173,4 +173,12 @@
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > app-menu-edit > edit-modal > div.edit-modal {
     width: 80vw;
   }
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table {
+    overflow:scroll;
+  }
+
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table {
+    table-layout: unset;
+  }
 }
