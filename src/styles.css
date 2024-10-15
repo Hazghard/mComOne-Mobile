@@ -181,4 +181,115 @@
   body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table {
     table-layout: unset;
   }
+  
+  // CSS for Hazards table :
+@media (max-width: 768px) {
+  /* Sélecteurs combinés pour masquer l'en-tête sur mobile */
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table thead,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table thead,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table thead {
+    display: none; /* Masquer l'en-tête sur mobile */
+  }
+
+  /* Sélecteurs combinés pour transformer les lignes de tableau en cartes */
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table tbody tr,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table tbody tr,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table tbody tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 15px; /* Augmenter l'espace de padding autour des "cartes" */
+    margin-bottom: 20px; /* Espacement supplémentaire entre les "cartes" */
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter un ombrage pour mieux différencier les cartes */
+  }
+
+  /* Sélecteurs combinés pour styliser chaque cellule */
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table tbody tr td,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table tbody tr td,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table tbody tr td {
+    width: 100% !important; /* Les cellules prennent toute la largeur */
+    max-width: 100% !important;
+    display: block; /* Affichage en bloc pour occuper la largeur totale */
+    padding: 10px 0; /* Espacement uniforme entre chaque cellule */
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
+    text-align: center; /* Centrer le texte des cellules */
+  }
+
+  /* Sélecteurs combinés pour la dernière cellule de chaque ligne */
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table tbody tr td:last-child,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table tbody tr td:last-child,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table tbody tr td:last-child {
+    border-bottom: none; /* Retirer la bordure pour le dernier élément */
+  }
+
+  /* Sélecteurs combinés pour ajuster les badges ou icônes dans les cellules */
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table tbody tr .badge,
+  body > app-root > div > app-layout > div > div > app-list > div > div.table-content > table tbody tr .hazard-icon,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table tbody tr .badge,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > div.table-content > table tbody tr .hazard-icon,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table tbody tr .badge,
+  body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-list > div.table-content.machines-table > table tbody tr .hazard-icon {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+  }
+}
+
+
+
+
+
+	// Hazard Editing
+	@media (max-width: 768px) {
+		// Main Hazard container
+	  app-machine-hazard-edit.ng-star-inserted {
+	    position: fixed !important; /* Positionner la modale en fixe pour qu'elle reste visible même au défilement */
+	    top: 0;
+	    left: 0;
+	    width: 100vw; /* La modale occupe toute la largeur de l'écran */
+	    height: 100vh; /* La modale occupe toute la hauteur de l'écran */
+	    z-index: 1000; /* Assurez-vous que la modale est au-dessus des autres éléments */
+	    overflow-y: auto; /* Permettre le défilement à l'intérieur de la modale */
+	    background: rgba(255, 255, 255, 0.95); /* Ajouter un fond pour masquer l'arrière-plan */
+	  }
+	
+	  /* Empêcher le body de défiler (alternativement, masquer le scroll du body en CSS) */
+	  body {
+	    // overflow: hidden !important; /* Désactiver le défilement de la page lorsque la modale est visible */
+	  }
+
+		// Side tools
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-menu {
+			width: 100vw;
+			// height: 40%;
+			padding: 1rem 1rem;
+			bottom: unset;
+		}
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-menu > div:nth-child(1) > nav{
+			flex-direction: row !important;
+		}
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-menu > div:nth-child(1), body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-menu > div:nth-child(2){
+			margin: 0 !important;
+		}
+		
+		
+		
+		// Hazard panel
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-content {
+			width: 100vw;
+			left: 0;
+			top: 18%;
+			
+		}
+		// Hazard Buttons
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-content > app-machine-hazard-rating > div.row.align-items-center.table-header > div{
+			padding: 0;
+		}
+		body > app-root > div > app-layout > div > div > app-breadcrumbs > div.project-content > app-menu > div > div.machine-content > app-machine-hazard-list > app-machine-hazard-edit > div.edit-content > app-machine-hazard-rating > div.row.align-items-center.table-header > div > div {
+			display: flex;
+		}
+	}
+
+
 }
